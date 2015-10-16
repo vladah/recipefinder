@@ -1,0 +1,22 @@
+<<h1>Searching for - <%= @search_term %></h1>
+
+<% if @recepies.nil? %>
+<p>No recepies found with relevant information ... Sorry </p>
+<% else %>
+
+
+<<table border="1">
+	<tr>
+		<th>Image</th>
+		<th>Title</th>
+		<th>Social Rank</th>
+	</tr>
+	<% @recepies.each do |recepie| %>
+	<tr class= <%= cycle('even', 'odd')%> >
+		<td><%= image_tag(recepie["smallIcon"])%></td>
+		<td><%= recepie["title"] %></td>
+		<td><%= course["social_rank"] %></td>
+	</tr>
+	<% end %>
+</table>
+<% end %>
