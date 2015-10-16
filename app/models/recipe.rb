@@ -1,6 +1,5 @@
 
 ENV["FOOD2FORK_KEY"] = '2cf6a2d23beae9518d7fa73aad4948cc'
-ENV["FOOD2FORK_SERVER_AND_PORT"] = nil
 
 class Recipe
 	include HTTParty
